@@ -17,3 +17,7 @@ font-family: VT323;
 .k2d {
     font-family: K2D;
     }
+body { 
+    background-color: black;
+    color: red;
+}
