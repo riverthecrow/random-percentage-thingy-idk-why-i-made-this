@@ -1,1 +1,19 @@
-
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=Doto:wght@100..900&family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Press+Start+2P&family=Silkscreen:wght@400;700&family=VT323&display=swap');
+.silkscreen {
+    font-family: Silkscreen;
+    }
+.dotgothic16 {
+    font-family: DotGothic16;
+    }
+.doto {
+    font-family: Doto;
+    }
+.vt323 {
+font-family: VT323;
+}
+.pressstart2p {
+    font-family: "Press Start 2P";
+        }
+.k2d {
+    font-family: K2D;
+    }
