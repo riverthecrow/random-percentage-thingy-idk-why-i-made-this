@@ -1,36 +1,79 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <link rel="stylesheet" href="style.css">
-<title>percentage thingy</title>
-<style>
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  margin: 0; 
-  color: red;
-  background-color: black;
-}
-
-#percentage-container {
-  text-align: center;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sigma percentage thingy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Silkscreen', cursive;
+            text-align: center;
+            margin-top: 50px;
+            background-color: #c1f0c1; 
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            display: inline-block;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+        }
+        .percentage {
+            font-size: 72px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin: 20px 0;
+        }
+        button {
+            font-family: 'Silkscreen', cursive;
+            background-color: #77dd77; 
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #68c368;
+        }
+        button:active {
+            transform: translateY(2px);
+        }
+    </style>
 </head>
 <body>
-<div class="dotgothic16">
-  <div id="percentage-container">
-    <h1>random percentage: <span id="percentage"></span></h1>
-  </div>
-  <br> <p> this is a percentage test that im hosting for no reason other than to just have a percentage thing (idk)</p>
-</div>
+    <div class="container">
+        <h1>RANDOM PERCENTAGE</h1>
+        <div class="percentage" id="percentage">--%</div>
+        <button onclick="generatePercentage()">GENERATE</button>
+    </div>
 
-<script>
-  const randomNumber = Math.floor(Math.random() * 100) + 1;
-  document.getElementById("percentage").textContent = randomNumber + "%";
-</script>
-
+    <script>
+        function generatePercentage() {
+            
+            const randomPercent = Math.floor(Math.random() * 100) + 1;
+            
+            document.getElementById('percentage').textContent = randomPercent + '%';
+            
+            const percentageElement = document.getElementById('percentage');
+            if (randomPercent < 30) {
+                percentageElement.style.color = '#ff6961'; 
+                
+            } else if (randomPercent < 70) {
+                percentageElement.style.color = '#ffb347'; 
+                
+            } else {
+                percentageElement.style.color = '#77dd77'; 
+                
+            }
+        }
+    </script>
 </body>
-</html>
