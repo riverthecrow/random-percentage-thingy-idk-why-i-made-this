@@ -1,13 +1,29 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>percentage</title>
-    </head>
+<head>
+<title>percentage thingy</title>
+<style>
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; 
+  margin: 0; 
+}
+
+#percentage-container {
+  text-align: center;
+}
+</style>
+</head>
 <body>
 
-    <h1>random percentage thingy: <p id="percentage"></p></h1>
+<div id="percentage-container">
+  <p>random percentage: <span id="percentage"></span></p>
+</div>
+
 <script>
-    const randomNumber = Math.floor(Math.random() * 100) + 1;
+  const randomNumber = Math.floor(Math.random() * 100) + 1;
   document.getElementById("percentage").textContent = randomNumber + "%";
 </script>
 
